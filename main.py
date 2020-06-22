@@ -34,9 +34,19 @@ print(inventory[-4]) #This will print ax
 
 #print(inventory[-5]) #This will give an IndexError
 
-#You can also get a range of items in your list by specifying the index of the first item you want and the index just above the last item you want
+#Since it's pretty important not to use an index outside the length of your list, you may find the length (or len for short) command helpful
+num_items = len(inventory) #Gets the number of items in the inventory list
+print(num_items)
+
+#You can also get a range of items in your list by specifying the index of the first item you want and the index just above the last item you want, separated by a colon in place of specifying a single index
 #The following will print the items from index 1 up to but not including index 3
 print(inventory[1:3])
+
+#if you want all the items from index 2 through the end of the list, you can omit the second index
+print(fibonacci_sequence[3:]) #prints [2, 3, 5, 8]
+
+#Similarly, if you want the items from the start of your list up to a certain index in your list, you can omit the first index 
+print(fibonacci_sequence[:3]) #Prints [0, 1, 1]
 
 #You can change items in your list just like you can change the value for a variable
 #The following line of code replaces 'apple' with 'melon' in our inventory list

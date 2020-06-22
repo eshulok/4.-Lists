@@ -2,10 +2,10 @@
 #To create a list, you use square brackets like this [] and use commas inside the brackets to separate items in the list
 
 #You may want to store a player's inventory in a game
-inventory = ["ax", "apple", "hat", "tent"]
+inventory = ["wood", "stone", "apple", "fishing rod"]
 
 #When you print the whole list, it displays it with the brackets and single quotes around the strings
-print (inventory)
+print ("Your inventory contains: %s" % inventory)
 
 #Lists can contain more than just strings
 #Lists can containe numbers
@@ -20,17 +20,17 @@ print(crazy_list)
 #For example, to print the item at index 1 in inventory, run the following line
 print (inventory[1])
 
-#Notice that the line above prints "apple", not "ax"
+#Notice that the line above prints "stone", not "wood"
 #This is because Python uses a 0-based index, meaning the first item in the list is at index 0  
-print(inventory[0]) #This will print ax
-print(inventory[3]) #This will print tent
+print(inventory[0]) #This will print wood
+print(inventory[3]) #This will print fishing rod
 
 #If you remove the # symbol from the following line, you will get an IndexError, meaning the index is bigger than number of items in the list
 #print (inventory[4]) 
 
 #You can also use negative numbers for the index 
 print(inventory[-1]) #This will print the last item in the list
-print(inventory[-4]) #This will print ax
+print(inventory[-4]) #This will print wood
 
 #print(inventory[-5]) #This will give an IndexError
 
@@ -49,8 +49,8 @@ print(fibonacci_sequence[3:]) #prints [2, 3, 5, 8]
 print(fibonacci_sequence[:3]) #Prints [0, 1, 1]
 
 #You can change items in your list just like you can change the value for a variable
-#The following line of code replaces 'apple' with 'melon' in our inventory list
-inventory[1] = "melon"
+#The following line of code replaces 'apple' with 'banana' in our inventory list
+inventory[2] = "banana"
 print(inventory)
 
 #You can add items to a list by using the append function (more on functions later in the course)
@@ -58,6 +58,14 @@ print(inventory)
 fibonacci_sequence.append(13)
 fibonacci_sequence.append(21)
 print(fibonacci_sequence)
+
+#You can insert items into the middle of the list using the insert function
+#The following code will insert 'apple' before the given index (which is 2)
+inventory.insert(2, 'apple')
+print(inventory)
+
+#You can see that by inserting an item before index 2, our new item is now index 2
+print("Item 2 in the list is %s" % inventory[2])
 
 #To remove an item from the list, we use a delete command, which is shortened to del
 #The following will remove 'hat' from the inventory list

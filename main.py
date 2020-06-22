@@ -69,4 +69,4 @@ print(inventory + fibonacci_sequence)
 print(inventory*5)
 
 #But you cannot multiply two lists with eachother
-print(inventory * fibonacci_sequence)
+#print(inventory * fibonacci_sequence) #Will give a TypeError
